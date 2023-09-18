@@ -6,8 +6,8 @@ o desperdício de alimentos e apoiar comunidades carentes.
 
 Nem todos os packages foram incrementados. O código encontra-se com muitos erros ainda não solucionados.
 
-Principalmente na parte de Security, dando erro do não autorização pelo Postman. 
-Não consegui solucionar.
+Principalmente na parte de Security, dando erro de não autorização pelo Postman. 
+Não consegui solucionar!!!
 
 Quando retirado a parte do Security, a API roda tranquilamente.
 
