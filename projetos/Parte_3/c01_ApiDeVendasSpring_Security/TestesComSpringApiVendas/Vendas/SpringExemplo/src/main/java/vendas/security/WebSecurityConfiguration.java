@@ -41,6 +41,7 @@ public class WebSecurityConfiguration {
                         .realmName("http://localhost:8080/h2-console/*")).csrf(csrf -> csrf.disable());
         return http.build();
     }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(8);
