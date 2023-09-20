@@ -1,0 +1,149 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > FornecedorService</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">estoque.app.service</a>
+</div>
+
+<h1>Coverage Summary for Class: FornecedorService (estoque.app.service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">FornecedorService</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    14,3%
+  </span>
+  <span class="absValue">
+    (1/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    25%
+  </span>
+  <span class="absValue">
+    (2/8)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package estoque.app.service;
+&nbsp;
+&nbsp;
+&nbsp;import estoque.app.model.FornecedorModel;
+&nbsp;import estoque.app.repository.FornecedorRepository;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.stereotype.Service;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;@Service
+&nbsp;public class FornecedorService {
+&nbsp;
+&nbsp;    private FornecedorRepository fornecedorRepository;
+&nbsp;
+&nbsp;    @Autowired
+<b class="fc">&nbsp;    public FornecedorService(FornecedorRepository fornecedorRepository) {</b>
+<b class="fc">&nbsp;        this.fornecedorRepository = fornecedorRepository;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public FornecedorModel cadastrarFornecedor(FornecedorModel fornecedorModel) {
+<b class="nc">&nbsp;        return fornecedorRepository.save(fornecedorModel);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;FornecedorModel&gt; listarTodosFornecedores() {
+<b class="nc">&nbsp;        return fornecedorRepository.findAll();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public FornecedorModel listarFornecedorPorId(Long id) {
+<b class="nc">&nbsp;        return fornecedorRepository.findById(id).orElse(null);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public FornecedorModel atualizarFornecedor(FornecedorModel fornecedorModel) {
+<b class="nc">&nbsp;        return fornecedorRepository.save(fornecedorModel);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void deletarFornecedor(Long id) {
+<b class="nc">&nbsp;        fornecedorRepository.deleteById(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    //Método para listar um fornecedor conforme DTO
+&nbsp;    public List&lt;FornecedorModel&gt; listarTodosFornecedoresDTO() {
+<b class="nc">&nbsp;        return fornecedorRepository.findAll();</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-01 11:13</div>
+</div>
+</body>
+</html>

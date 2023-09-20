@@ -1,0 +1,250 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > FornecedorController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">estoque.app.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: FornecedorController (estoque.app.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">FornecedorController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    14,3%
+  </span>
+  <span class="absValue">
+    (1/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    4,7%
+  </span>
+  <span class="absValue">
+    (2/43)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package estoque.app.controller;
+&nbsp;
+&nbsp;
+&nbsp;import estoque.app.exceptions.FornecedorNotFound;
+&nbsp;import estoque.app.model.FornecedorModel;
+&nbsp;import estoque.app.model.dto.FornecedorListDTO;
+&nbsp;import estoque.app.service.FornecedorService;
+&nbsp;import io.swagger.v3.oas.annotations.Operation;
+&nbsp;import io.swagger.v3.oas.annotations.responses.ApiResponse;
+&nbsp;import io.swagger.v3.oas.annotations.responses.ApiResponses;
+&nbsp;import io.swagger.v3.oas.annotations.tags.Tag;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;/fornecedores&quot;)
+&nbsp;@Tag(name = &quot;Fornecedores&quot;, description = &quot;Endpoint para controle de fornecedores.&quot;)
+<b class="fc">&nbsp;public class FornecedorController {</b>
+<b class="fc">&nbsp;</b>
+&nbsp;    private FornecedorService fornecedorService;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    public FornecedorController(FornecedorService fornecedorService) {
+&nbsp;        this.fornecedorService = fornecedorService;
+<b class="nc">&nbsp;    }</b>
+&nbsp;
+&nbsp;    //Endpoint para cadastrar um novo fornecedor
+&nbsp;    @PostMapping
+&nbsp;    @Operation(summary = &quot;Cadastra um novo fornecedor.&quot;,
+&nbsp;            description = &quot;Endpoint para cadastrar um novo fornecedor.&quot;, method = &quot;POST&quot;)
+<b class="nc">&nbsp;    @ApiResponses(value = {</b>
+&nbsp;            @ApiResponse(responseCode = &quot;201&quot;, description = &quot;Fornecedor cadastrado com sucesso&quot;)})
+&nbsp;    public FornecedorModel cadastrarFornecedor(@RequestBody FornecedorModel fornecedorModel) {
+&nbsp;        return fornecedorService.cadastrarFornecedor(fornecedorModel);
+&nbsp;    }
+&nbsp;
+<b class="nc">&nbsp;    //Endpoint para listar todos os fornecedores</b>
+&nbsp;    @GetMapping
+<b class="nc">&nbsp;    @Operation(summary = &quot;Lista todos os fornecedores.&quot;,</b>
+<b class="nc">&nbsp;            description = &quot;Endpoint para listar todos os fornecedores.&quot;, method = &quot;GET&quot;)</b>
+&nbsp;    @ApiResponses(value = {
+<b class="nc">&nbsp;            @ApiResponse(responseCode = &quot;200&quot;, description = &quot;Fornecedores listados com sucesso&quot;)})</b>
+&nbsp;    public List&lt;FornecedorModel&gt; listarTodosFornecedores() {
+&nbsp;        return fornecedorService.listarTodosFornecedores();
+&nbsp;    }
+&nbsp;
+&nbsp;    //Endpoint para listar um fornecedor por id
+<b class="nc">&nbsp;    @GetMapping(&quot;/{id}&quot;)</b>
+<b class="nc">&nbsp;    @Operation(summary = &quot;Lista um fornecedor por id.&quot;,</b>
+<b class="nc">&nbsp;            description = &quot;Endpoint para listar um fornecedor por id.&quot;,method = &quot;GET&quot;)</b>
+&nbsp;    @ApiResponses(value = {
+<b class="nc">&nbsp;            @ApiResponse(responseCode = &quot;200&quot;, description = &quot;Fornecedor listado com sucesso&quot;)})</b>
+<b class="nc">&nbsp;    public FornecedorModel listarFornecedorPorId(@PathVariable Long id) {</b>
+&nbsp;        FornecedorModel fornecedorExistente = fornecedorService.listarFornecedorPorId(id);
+<b class="nc">&nbsp;</b>
+<b class="nc">&nbsp;        if (fornecedorExistente == null) {</b>
+&nbsp;            throw new FornecedorNotFound(id);
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;        return fornecedorExistente;</b>
+&nbsp;    }
+<b class="nc">&nbsp;</b>
+<b class="nc">&nbsp;    //Endpoint para atualizar um fornecedor</b>
+&nbsp;    @PutMapping(&quot;/{id}&quot;)
+<b class="nc">&nbsp;    @Operation(summary = &quot;Atualiza qualquer dado um fornecedor cadastrado por id.&quot;,</b>
+<b class="nc">&nbsp;            description = &quot;Endpoint para atualizar um fornecedor por id&quot; +</b>
+&nbsp;                    &quot;Pode preencher para modificar todos os campos ou apenas alguns ou somente um.&quot;
+<b class="nc">&nbsp;            , method = &quot;PUT&quot;)</b>
+<b class="nc">&nbsp;    @ApiResponses(value = {</b>
+&nbsp;            @ApiResponse(responseCode = &quot;200&quot;, description = &quot;Fornecedor atualizado com sucesso&quot;)})
+<b class="nc">&nbsp;    public FornecedorModel atualizarFornecedor(@PathVariable Long id, @RequestBody FornecedorModel fornecedorModel) {</b>
+<b class="nc">&nbsp;        FornecedorModel fornecedorExistente = fornecedorService.listarFornecedorPorId(id);</b>
+&nbsp;        if (fornecedorExistente != null) {
+<b class="nc">&nbsp;            fornecedorExistente.setId(id);</b>
+<b class="nc">&nbsp;</b>
+&nbsp;            if (fornecedorModel.getCnpj() != null) {
+<b class="nc">&nbsp;                fornecedorExistente.setCnpj(fornecedorModel.getCnpj());</b>
+<b class="nc">&nbsp;            }</b>
+&nbsp;            if (fornecedorModel.getRazaoSocial() != null) {
+&nbsp;                fornecedorExistente.setRazaoSocial(fornecedorModel.getRazaoSocial());
+&nbsp;            }
+&nbsp;            if (fornecedorModel.getNomeFantasia() != null) {
+<b class="nc">&nbsp;                fornecedorExistente.setNomeFantasia(fornecedorModel.getNomeFantasia());</b>
+&nbsp;            }
+&nbsp;            if (fornecedorModel.getEmail() != null) {
+<b class="nc">&nbsp;                fornecedorExistente.setEmail(fornecedorModel.getEmail());</b>
+&nbsp;            }
+&nbsp;            if (fornecedorModel.getCategoriaProduto() != null) {
+&nbsp;                fornecedorExistente.setCategoriaProduto(fornecedorModel.getCategoriaProduto());
+&nbsp;            }
+&nbsp;            if (fornecedorModel.getNomeProduto() != null) {
+<b class="nc">&nbsp;                fornecedorExistente.setNomeProduto(fornecedorModel.getNomeProduto());</b>
+&nbsp;            }
+&nbsp;            if (fornecedorModel.getNomeContato() != null) {
+&nbsp;                fornecedorExistente.setNomeContato(fornecedorModel.getNomeContato());
+&nbsp;            }
+&nbsp;            if (fornecedorModel.getTelefone() != null) {
+<b class="nc">&nbsp;                fornecedorExistente.setTelefone(fornecedorModel.getTelefone());</b>
+<b class="nc">&nbsp;            }</b>
+&nbsp;            if (fornecedorModel.getEndereco() != null) {
+<b class="nc">&nbsp;                fornecedorExistente.setEndereco(fornecedorModel.getEndereco());</b>
+<b class="nc">&nbsp;            }</b>
+<b class="nc">&nbsp;</b>
+<b class="nc">&nbsp;        } else {</b>
+<b class="nc">&nbsp;</b>
+<b class="nc">&nbsp;            throw new FornecedorNotFound(id);</b>
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;        return fornecedorService.atualizarFornecedor(fornecedorExistente);</b>
+<b class="nc">&nbsp;    }</b>
+&nbsp;
+&nbsp;    //Endpoint para deletar um fornecedor
+&nbsp;    @DeleteMapping(&quot;/{id}&quot;)
+&nbsp;    @Operation(summary = &quot;Deleta um fornecedor por id.&quot;,
+&nbsp;            description = &quot;Endpoint para deletar um fornecedor.&quot;, method = &quot;DELETE&quot;)
+&nbsp;    @ApiResponses(value = {
+&nbsp;            @ApiResponse(responseCode = &quot;200&quot;, description = &quot;Fornecedor deletado com sucesso&quot;)})
+&nbsp;    public void deletarFornecedor(@PathVariable Long id) {
+&nbsp;        fornecedorService.deletarFornecedor(id);
+&nbsp;    }
+&nbsp;
+&nbsp;    //Aqui Endpoint para listar um fornecedor conforme DTO
+&nbsp;    @GetMapping(&quot;/dto&quot;)
+&nbsp;    @Operation(summary = &quot;Listagem de todos os fornecedores, conforme limitações do DTO&quot;,
+&nbsp;            description = &quot;Endpoint para listar um fornecedor por id&quot; + &quot;\n&quot; +
+&nbsp;                    &quot;Só será retornado os campos id, cnpj, razaoSocial e nomeFantasia.&quot;
+&nbsp;            , method = &quot;GET&quot;)
+&nbsp;    @ApiResponses(value = {
+&nbsp;            @ApiResponse(responseCode = &quot;200&quot;, description = &quot;Fornecedores listados com sucesso&quot;)
+&nbsp;    })
+&nbsp;    public List&lt;FornecedorListDTO&gt; listarTodosFornecedoresDTO() {
+&nbsp;        List&lt;FornecedorModel&gt; fornecedores = fornecedorService.listarTodosFornecedoresDTO();
+&nbsp;        List&lt;FornecedorListDTO&gt; dtos = new ArrayList&lt;&gt;();
+&nbsp;
+&nbsp;        for (FornecedorModel fornecedor : fornecedores) {
+&nbsp;            FornecedorListDTO dto = new FornecedorListDTO();
+&nbsp;            dto.setId(fornecedor.getId());
+&nbsp;            dto.setCnpj(fornecedor.getCnpj());
+&nbsp;            dto.setRazaoSocial(fornecedor.getRazaoSocial());
+&nbsp;            dto.setNomeFantasia(fornecedor.getNomeFantasia());
+&nbsp;            dtos.add(dto);
+&nbsp;        }
+&nbsp;        return dtos;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-01 11:13</div>
+</div>
+</body>
+</html>

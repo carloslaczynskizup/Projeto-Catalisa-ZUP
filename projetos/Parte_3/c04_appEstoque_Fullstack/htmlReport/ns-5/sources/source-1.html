@@ -1,0 +1,160 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > FornecedorModel</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">estoque.app.model</a>
+</div>
+
+<h1>Coverage Summary for Class: FornecedorModel (estoque.app.model)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">FornecedorModel</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,3%
+  </span>
+  <span class="absValue">
+    (12/13)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,3%
+  </span>
+  <span class="absValue">
+    (12/13)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">FornecedorModel$HibernateProxy$Mn0xMJD8</td>
+  </tr>
+  <tr>
+    <td class="name">FornecedorModel$HibernateProxy$Vg6X6Sks</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    92,3%
+  </span>
+  <span class="absValue">
+    (12/13)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,3%
+  </span>
+  <span class="absValue">
+    (12/13)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package estoque.app.model;
+&nbsp;
+&nbsp;
+&nbsp;import lombok.AllArgsConstructor;
+&nbsp;import lombok.Getter;
+&nbsp;import lombok.NoArgsConstructor;
+&nbsp;import lombok.Setter;
+&nbsp;
+&nbsp;import javax.persistence.*;
+&nbsp;
+&nbsp;@Entity
+&nbsp;@Table(name = &quot;fornecedores&quot;)
+&nbsp;@Getter
+<b class="nc">&nbsp;@Setter</b>
+<b class="fc">&nbsp;@AllArgsConstructor</b>
+<b class="fc">&nbsp;@NoArgsConstructor</b>
+&nbsp;public class FornecedorModel {
+&nbsp;
+&nbsp;    @Id
+&nbsp;    @GeneratedValue(strategy = GenerationType.IDENTITY)
+<b class="fc">&nbsp;    private Long id;</b>
+&nbsp;
+&nbsp;    @Column(name = &quot;cnpj&quot;, length = 14, nullable = false)
+<b class="fc">&nbsp;    private String cnpj;</b>
+&nbsp;    @Column(name = &quot;razao_social&quot;, length = 100, nullable = false)
+<b class="fc">&nbsp;    private String razaoSocial;</b>
+&nbsp;    @Column(name = &quot;nome_fantasia&quot;, length = 100, nullable = false)
+<b class="fc">&nbsp;    private String nomeFantasia;</b>
+&nbsp;    @Column(name = &quot;email&quot;, length = 50, nullable = false)
+<b class="fc">&nbsp;    private String email;</b>
+&nbsp;    @Column(name = &quot;categoria_produto&quot;, length = 50, nullable = false)
+<b class="fc">&nbsp;    private String categoriaProduto;</b>
+&nbsp;    @Column(name = &quot;nome_produto&quot;, length = 100, nullable = false)
+<b class="fc">&nbsp;    private String nomeProduto;</b>
+&nbsp;    @Column(name = &quot;nome_contato&quot;, length = 50, nullable = false)
+<b class="fc">&nbsp;    private String nomeContato;</b>
+&nbsp;    @Column(name = &quot;telefone&quot;, length = 15, nullable = false)
+<b class="fc">&nbsp;    private String telefone;</b>
+&nbsp;    @Column(name = &quot;endereco&quot;, length = 100, nullable = false)
+<b class="fc">&nbsp;    private String endereco;</b>
+&nbsp;
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-01 11:13</div>
+</div>
+</body>
+</html>

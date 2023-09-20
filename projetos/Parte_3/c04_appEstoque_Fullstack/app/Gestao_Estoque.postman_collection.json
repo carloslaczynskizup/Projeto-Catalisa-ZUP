@@ -1,0 +1,822 @@
+{
+	"info": {
+		"_postman_id": "df8b33a4-e4b6-4e11-bc62-93b5233d2563",
+		"name": "Gestão Estoque",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28783575"
+	},
+	"item": [
+		{
+			"name": "PRODUTOS",
+			"item": [
+				{
+					"name": "Buscar todos PRODUTOS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Buscar todos PRODUTOS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 12:14:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 40,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"descricaoProduto\": \"Descrição do produto A\",\n        \"categoriaProduto\": \"Categoria ABC\",\n        \"precoVenda\": 49.99,\n        \"quantidadeEstoque\": 100,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 17:46:11\",\n        \"fornecedor\": {\n            \"id\": 1,\n            \"cnpj\": \"0987655321\",\n            \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n            \"nomeFantasia\": \"Pereira Roupas\",\n            \"email\": \"teste@teste.com\",\n            \"categoriaProduto\": \"Roupas e Moda\",\n            \"nomeProduto\": \"Regata algodão\",\n            \"nomeContato\": \"Adriano\",\n            \"telefone\": \"22-998765-2213\",\n            \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n        }\n    },\n    {\n        \"id\": 42,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"descricaoProduto\": \"Descrição do produto A\",\n        \"categoriaProduto\": \"Categoria ABC\",\n        \"precoVenda\": 49.99,\n        \"quantidadeEstoque\": 100,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 17:52:41\",\n        \"fornecedor\": {\n            \"id\": 1,\n            \"cnpj\": \"0987655321\",\n            \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n            \"nomeFantasia\": \"Pereira Roupas\",\n            \"email\": \"teste@teste.com\",\n            \"categoriaProduto\": \"Roupas e Moda\",\n            \"nomeProduto\": \"Regata algodão\",\n            \"nomeContato\": \"Adriano\",\n            \"telefone\": \"22-998765-2213\",\n            \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n        }\n    },\n    {\n        \"id\": 45,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"descricaoProduto\": \"Descrição do produto A\",\n        \"categoriaProduto\": \"Categoria ABC\",\n        \"precoVenda\": 49.99,\n        \"quantidadeEstoque\": 100,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 17:58:29\",\n        \"fornecedor\": {\n            \"id\": 1,\n            \"cnpj\": \"0987655321\",\n            \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n            \"nomeFantasia\": \"Pereira Roupas\",\n            \"email\": \"teste@teste.com\",\n            \"categoriaProduto\": \"Roupas e Moda\",\n            \"nomeProduto\": \"Regata algodão\",\n            \"nomeContato\": \"Adriano\",\n            \"telefone\": \"22-998765-2213\",\n            \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n        }\n    },\n    {\n        \"id\": 46,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"descricaoProduto\": \"Descrição do produto A\",\n        \"categoriaProduto\": \"Categoria ABC\",\n        \"precoVenda\": 49.99,\n        \"quantidadeEstoque\": 100,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 18:14:55\",\n        \"fornecedor\": {\n            \"id\": 1,\n            \"cnpj\": \"0987655321\",\n            \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n            \"nomeFantasia\": \"Pereira Roupas\",\n            \"email\": \"teste@teste.com\",\n            \"categoriaProduto\": \"Roupas e Moda\",\n            \"nomeProduto\": \"Regata algodão\",\n            \"nomeContato\": \"Adriano\",\n            \"telefone\": \"22-998765-2213\",\n            \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n        }\n    },\n    {\n        \"id\": 17,\n        \"nomeProduto\": \"Relógio Inteligente\",\n        \"marca\": \"TESTE3\",\n        \"descricaoProduto\": \"TESTE\",\n        \"categoriaProduto\": \"Teste\",\n        \"precoVenda\": 198.9,\n        \"quantidadeEstoque\": 122,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 100,\n        \"dataCadastro\": \"30/08/2023 10:09:40\",\n        \"fornecedor\": {\n            \"id\": 1,\n            \"cnpj\": \"0987655321\",\n            \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n            \"nomeFantasia\": \"Pereira Roupas\",\n            \"email\": \"teste@teste.com\",\n            \"categoriaProduto\": \"Roupas e Moda\",\n            \"nomeProduto\": \"Regata algodão\",\n            \"nomeContato\": \"Adriano\",\n            \"telefone\": \"22-998765-2213\",\n            \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n        }\n    },\n    {\n        \"id\": 48,\n        \"nomeProduto\": \"Notebook Ultra\",\n        \"marca\": \"TechPro\",\n        \"descricaoProduto\": \"Notebook de alto desempenho\",\n        \"categoriaProduto\": \"Eletrônicos\",\n        \"precoVenda\": 1999.99,\n        \"quantidadeEstoque\": 50,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 18:18:22\",\n        \"fornecedor\": null\n    },\n    {\n        \"id\": 49,\n        \"nomeProduto\": \"Camiseta Esportiva\",\n        \"marca\": \"FitGear\",\n        \"descricaoProduto\": \"Camiseta para prática de esportes\",\n        \"categoriaProduto\": \"Vestuário\",\n        \"precoVenda\": 29.99,\n        \"quantidadeEstoque\": 200,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 18:20:00\",\n        \"fornecedor\": null\n    },\n    {\n        \"id\": 50,\n        \"nomeProduto\": \"Mouse Óptico\",\n        \"marca\": \"TechMice\",\n        \"descricaoProduto\": \"Mouse de alta precisão\",\n        \"categoriaProduto\": \"Acessórios de Computador\",\n        \"precoVenda\": 19.99,\n        \"quantidadeEstoque\": 150,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 18:20:25\",\n        \"fornecedor\": null\n    },\n    {\n        \"id\": 51,\n        \"nomeProduto\": \"Cadeira Ergonômica\",\n        \"marca\": \"ErgoDesign\",\n        \"descricaoProduto\": \"Cadeira confortável para escritório\",\n        \"categoriaProduto\": \"Móveis\",\n        \"precoVenda\": 249.99,\n        \"quantidadeEstoque\": 30,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 18:20:47\",\n        \"fornecedor\": null\n    },\n    {\n        \"id\": 52,\n        \"nomeProduto\": \"Relógio Inteligente\",\n        \"marca\": \"SmartWear\",\n        \"descricaoProduto\": \"Relógio com recursos inteligentes\",\n        \"categoriaProduto\": \"Acessórios de Tecnologia\",\n        \"precoVenda\": 129.99,\n        \"quantidadeEstoque\": 80,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 18:21:12\",\n        \"fornecedor\": null\n    },\n    {\n        \"id\": 1,\n        \"nomeProduto\": \"REGATA PREMIUM, GOLA V, TAMANHO M\",\n        \"marca\": \"RedBlack\",\n        \"descricaoProduto\": \"ok\",\n        \"categoriaProduto\": \"REGATA\",\n        \"precoVenda\": 45.9,\n        \"quantidadeEstoque\": 50,\n        \"tipoMovimentacao\": \"Saída\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"28/08/2023 19:57:07\",\n        \"fornecedor\": {\n            \"id\": 1,\n            \"cnpj\": \"0987655321\",\n            \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n            \"nomeFantasia\": \"Pereira Roupas\",\n            \"email\": \"teste@teste.com\",\n            \"categoriaProduto\": \"Roupas e Moda\",\n            \"nomeProduto\": \"Regata algodão\",\n            \"nomeContato\": \"Adriano\",\n            \"telefone\": \"22-998765-2213\",\n            \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n        }\n    },\n    {\n        \"id\": 53,\n        \"nomeProduto\": \"Relógio Inteligente\",\n        \"marca\": \"SmartWear\",\n        \"descricaoProduto\": \"Relógio com recursos inteligentes\",\n        \"categoriaProduto\": \"Acessórios de Tecnologia\",\n        \"precoVenda\": 129.99,\n        \"quantidadeEstoque\": 80,\n        \"tipoMovimentacao\": \"Entrada\",\n        \"qtdMovimentacao\": 0,\n        \"dataCadastro\": \"30/08/2023 19:46:54\",\n        \"fornecedor\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Buscar todos PRODUTOS DTO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/dto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"dto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Buscar todos PRODUTOS DTO",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos/dto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos",
+										"dto"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 12:15:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 40,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"quantidadeEstoque\": 100\n    },\n    {\n        \"id\": 42,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"quantidadeEstoque\": 100\n    },\n    {\n        \"id\": 45,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"quantidadeEstoque\": 100\n    },\n    {\n        \"id\": 46,\n        \"nomeProduto\": \"Produto A\",\n        \"marca\": \"Marca XYZ\",\n        \"quantidadeEstoque\": 100\n    },\n    {\n        \"id\": 17,\n        \"nomeProduto\": \"Relógio Inteligente\",\n        \"marca\": \"TESTE3\",\n        \"quantidadeEstoque\": 122\n    },\n    {\n        \"id\": 48,\n        \"nomeProduto\": \"Notebook Ultra\",\n        \"marca\": \"TechPro\",\n        \"quantidadeEstoque\": 50\n    },\n    {\n        \"id\": 49,\n        \"nomeProduto\": \"Camiseta Esportiva\",\n        \"marca\": \"FitGear\",\n        \"quantidadeEstoque\": 200\n    },\n    {\n        \"id\": 50,\n        \"nomeProduto\": \"Mouse Óptico\",\n        \"marca\": \"TechMice\",\n        \"quantidadeEstoque\": 150\n    },\n    {\n        \"id\": 51,\n        \"nomeProduto\": \"Cadeira Ergonômica\",\n        \"marca\": \"ErgoDesign\",\n        \"quantidadeEstoque\": 30\n    },\n    {\n        \"id\": 52,\n        \"nomeProduto\": \"Relógio Inteligente\",\n        \"marca\": \"SmartWear\",\n        \"quantidadeEstoque\": 80\n    },\n    {\n        \"id\": 1,\n        \"nomeProduto\": \"REGATA PREMIUM, GOLA V, TAMANHO M\",\n        \"marca\": \"RedBlack\",\n        \"quantidadeEstoque\": 50\n    },\n    {\n        \"id\": 53,\n        \"nomeProduto\": \"Relógio Inteligente\",\n        \"marca\": \"SmartWear\",\n        \"quantidadeEstoque\": 80\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Buscar PRODUTO ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"46"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Buscar PRODUTO ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos/46",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos",
+										"46"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 12:16:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 46,\n    \"nomeProduto\": \"Produto A\",\n    \"marca\": \"Marca XYZ\",\n    \"descricaoProduto\": \"Descrição do produto A\",\n    \"categoriaProduto\": \"Categoria ABC\",\n    \"precoVenda\": 49.99,\n    \"quantidadeEstoque\": 100,\n    \"tipoMovimentacao\": \"Entrada\",\n    \"qtdMovimentacao\": 0,\n    \"dataCadastro\": \"30/08/2023 18:14:55\",\n    \"fornecedor\": {\n        \"id\": 1,\n        \"cnpj\": \"0987655321\",\n        \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n        \"nomeFantasia\": \"Pereira Roupas\",\n        \"email\": \"teste@teste.com\",\n        \"categoriaProduto\": \"Roupas e Moda\",\n        \"nomeProduto\": \"Regata algodão\",\n        \"nomeContato\": \"Adriano\",\n        \"telefone\": \"22-998765-2213\",\n        \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Cadastrar PRODUTO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProduto\": \"Relógio Inteligente\",\r\n    \"marca\": \"SmartWear Premium\",\r\n    \"descricaoProduto\": \"Relógio com recursos inteligentes\",\r\n    \"categoriaProduto\": \"Acessórios de Tecnologia\",\r\n    \"precoVenda\": 229.99,\r\n    \"quantidadeEstoque\": 50,\r\n    \"tipoMovimentacao\": \"Entrada\",\r\n    \"fornecedor\": {\"id\" : 2}\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cadastrar PRODUTO",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomeProduto\": \"Relógio Inteligente\",\r\n    \"marca\": \"SmartWear Premium\",\r\n    \"descricaoProduto\": \"Relógio com recursos inteligentes\",\r\n    \"categoriaProduto\": \"Acessórios de Tecnologia\",\r\n    \"precoVenda\": 229.99,\r\n    \"quantidadeEstoque\": 50,\r\n    \"tipoMovimentacao\": \"Entrada\",\r\n    \"fornecedor\": {\"id\" : 2}\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 12:18:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 55,\n    \"nomeProduto\": \"Relógio Inteligente\",\n    \"marca\": \"SmartWear Premium\",\n    \"descricaoProduto\": \"Relógio com recursos inteligentes\",\n    \"categoriaProduto\": \"Acessórios de Tecnologia\",\n    \"precoVenda\": 229.99,\n    \"quantidadeEstoque\": 50,\n    \"tipoMovimentacao\": \"Entrada\",\n    \"qtdMovimentacao\": 0,\n    \"dataCadastro\": \"31/08/2023 09:18:16\",\n    \"fornecedor\": {\n        \"id\": 2,\n        \"cnpj\": null,\n        \"razaoSocial\": null,\n        \"nomeFantasia\": null,\n        \"email\": null,\n        \"categoriaProduto\": null,\n        \"nomeProduto\": null,\n        \"nomeContato\": null,\n        \"telefone\": null,\n        \"endereco\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar PRODUTO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"61"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar PRODUTO",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos/61",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos",
+										"61"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 12:49:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Alterar dado PRODUTOS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProduto\": \"Relógio Inteligente\",\r\n    \"categoriaProduto\": \"Teste\",\r\n    \"fornecedor\": { \"id\": 1}\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"17"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Alterar dado PRODUTOS",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomeProduto\": \"Relógio Inteligente\",\r\n    \"categoriaProduto\": \"Teste\",\r\n    \"fornecedor\": { \"id\": 1}\r\n    \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos",
+										"17"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 12:49:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 17,\n    \"nomeProduto\": \"Relógio Inteligente\",\n    \"marca\": \"TESTE3\",\n    \"descricaoProduto\": \"TESTE\",\n    \"categoriaProduto\": \"Teste\",\n    \"precoVenda\": 198.9,\n    \"quantidadeEstoque\": 122,\n    \"tipoMovimentacao\": \"Entrada\",\n    \"qtdMovimentacao\": 100,\n    \"dataCadastro\": \"30/08/2023 10:09:40\",\n    \"fornecedor\": {\n        \"id\": 1,\n        \"cnpj\": null,\n        \"razaoSocial\": null,\n        \"nomeFantasia\": null,\n        \"email\": null,\n        \"categoriaProduto\": null,\n        \"nomeProduto\": null,\n        \"nomeContato\": null,\n        \"telefone\": null,\n        \"endereco\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Alterar Qtd Estoque",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoMovimentacao\": \"Entrada\",\r\n    \"qtdMovimentacao\": 120\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produtos/estoque/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produtos",
+								"estoque",
+								"17"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Alterar Qtd Estoque",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tipoMovimentacao\": \"Entrada\",\r\n    \"qtdMovimentacao\": 120\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/produtos/estoque/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"produtos",
+										"estoque",
+										"17"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Aug 2023 12:50:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 17,\n    \"nomeProduto\": \"Relógio Inteligente\",\n    \"marca\": \"TESTE3\",\n    \"descricaoProduto\": \"TESTE\",\n    \"categoriaProduto\": \"Teste\",\n    \"precoVenda\": 198.9,\n    \"quantidadeEstoque\": 242,\n    \"tipoMovimentacao\": \"Entrada\",\n    \"qtdMovimentacao\": 120,\n    \"dataCadastro\": \"30/08/2023 10:09:40\",\n    \"fornecedor\": {\n        \"id\": 1,\n        \"cnpj\": \"0987655321\",\n        \"razaoSocial\": \"Pereira Roupas em Geral LTDA\",\n        \"nomeFantasia\": \"Pereira Roupas\",\n        \"email\": \"teste@teste.com\",\n        \"categoriaProduto\": \"Roupas e Moda\",\n        \"nomeProduto\": \"Regata algodão\",\n        \"nomeContato\": \"Adriano\",\n        \"telefone\": \"22-998765-2213\",\n        \"endereco\": \"Rua Paraíba, 123, São Paulo - SP\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "FORNECEDORES",
+			"item": [
+				{
+					"name": "Buscar todos FORNECEDORES",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar todos FORNECEDORES DTO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/dto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"dto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar FORNECEDORES ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar FORNECEDOR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\": \"54321098765432\",\r\n    \"razaoSocial\": \"EsportesAção Ltda.\",\r\n    \"nomeFantasia\": \"EsportMania\",\r\n    \"email\": \"contato@esportmania.com\",\r\n    \"categoriaProduto\": \"Esportes\",\r\n    \"nomeProduto\": \"Bola de Futebol\",\r\n    \"nomeContato\": \"Ricardo Santos\",\r\n    \"telefone\": \"(81) 9999-8888\",\r\n    \"endereco\": \"Rua dos Esportes, 15\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar FORNECEDOR",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar dado FORNECEDOR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"endereco\": \"Av. da Moda, 1510\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedores/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedores",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

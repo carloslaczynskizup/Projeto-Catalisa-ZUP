@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Produtos</h1>
+    </header>
+
+    <form id="product-form">
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input type="text" id="nomeProduto" required><br></br>
+
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" required><br></br>
+
+        <label for="descricaoProduto">Descrição:</label>
+        <textarea id="descricaoProduto" required></textarea><br></br>
+
+        <label for="categoriaProduto">Categoria:</label>
+        <input type="text" id="categoriaProduto" required><br></br>
+
+        <label for="precoVenda">Preço de Venda:</label>
+        <input type="number" id="precoVenda" step="0.01" required><br></br>
+
+        <label for="quantidadeEstoque">Quantidade em Estoque:</label></br>
+        <input type="number" id="quantidadeEstoque" required><br></br>
+
+        <label for="tipoMovimentacao">Tipo de Movimentação (Entrada ou Saída):</label></br>
+        <input type="text" id="tipoMovimentacao" required><br></br>
+
+        <button type="submit">Cadastrar Produto</button>
+
+        <button onclick="voltarParaPaginaAnterior()">Voltar à Página Anterior</button>
+        <script>
+            function voltarParaPaginaAnterior() {
+                window.history.back(); // Esta função volta para a página anterior no histórico do navegador
+            }
+        </script>
+
+
+    </form>
+
+    <footer>
+    </br>
+        <p>&copy; 2023 - Carlos Laczynski</p>
+    </footer>
+
+    <script src="./js/cadastrar.js"></script>
+</body>
+</html>

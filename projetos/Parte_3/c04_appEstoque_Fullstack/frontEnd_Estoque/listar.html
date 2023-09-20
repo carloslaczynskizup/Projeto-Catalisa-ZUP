@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Produtos Cadastrados</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Listagem de Produtos Cadastrados</h1>
+    </header>
+
+    <div id="produto-list">
+        
+        <!-- Produtos serão Listados aqui via JS -->
+
+    </div>
+
+    <button onclick="voltarParaPaginaAnterior()">Voltar à Página Anterior</button>
+    <script>
+        function voltarParaPaginaAnterior() {
+            window.history.back(); // Esta função volta para a página anterior no histórico do navegador
+        }
+    </script>   
+    
+
+    <footer>
+        <p>&copy; 2023 - Carlos Laczynski</p>
+    </footer>
+
+    <script src="./js/listar.js"></script>
+
+</body>
+
+</html>
